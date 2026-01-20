@@ -159,7 +159,7 @@ const App: React.FC = () => {
             </div>
             <div className="glass-card p-4 rounded-xl border-dashed border-gold-border/20 text-center">
               <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-2 font-bold">Frutas Disponíveis</p>
-              <p className="text-sm text-gray-300 font-medium">Limão, Morango, Abacaxi, Kiwi, Maracujá</p>
+              <p className="text-sm text-gray-300 font-medium">Limão, Morango, Kiwi, Maracujá</p>
             </div>
           </div>
         )}
