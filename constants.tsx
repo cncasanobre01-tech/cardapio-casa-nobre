@@ -1,0 +1,99 @@
+
+import { Category, MenuData } from './types';
+
+export const MENU_DATA: MenuData = {
+  whiskies: [
+    { id: 'w1', name: 'Gold Label', mixer: 'Red Bull', price: 70.00, category: Category.WHISKY },
+    { id: 'w2', name: 'Black Label', mixer: 'Red Bull', price: 55.00, category: Category.WHISKY },
+    { id: 'w3', name: "Jack Daniel's", mixer: 'Red Bull', price: 50.00, category: Category.WHISKY },
+    { id: 'w4', name: 'Red Label', mixer: 'Red Bull', price: 35.00, category: Category.WHISKY },
+    { id: 'w5', name: 'Cavalo Branco', mixer: 'Red Bull', price: 30.00, category: Category.WHISKY },
+    { id: 'w6', name: 'Red Label', mixer: 'Vibe', price: 30.00, category: Category.WHISKY },
+    { id: 'w7', name: 'Passport', mixer: 'Red Bull', price: 23.00, category: Category.WHISKY },
+    { id: 'w8', name: 'Passport', mixer: 'Vibe', price: 20.00, category: Category.WHISKY },
+    { id: 'w9', name: 'Cockland', mixer: 'Vibe', price: 15.00, category: Category.WHISKY },
+    { id: 'w10', name: 'Olden Blend', mixer: 'Vibe', price: 13.00, category: Category.WHISKY },
+    { id: 'w11', name: 'Chanceller', mixer: 'Vibe', price: 10.00, category: Category.WHISKY },
+    { id: 'w12', name: 'Master Gold', mixer: 'Vibe', price: 10.00, category: Category.WHISKY },
+  ],
+  gins: [
+    { id: 'g1', name: 'Beefeater Tradicional/Morango', price: 45.00, category: Category.GIN },
+    { id: 'g2', name: 'Eternity', description: '(Todas as versões)', price: 13.00, category: Category.GIN },
+    { id: 'g3', name: 'Invictus', description: '(Todas as versões)', price: 10.00, category: Category.GIN },
+  ],
+  ginFlavors: [
+    'Abacaxi c/ Hortelã', 'Morango', 'Morango c/ Pêssego', 'Melancia', 'Tropical', 'Maça Verde', 'Royale'
+  ],
+  cachacas: [
+    { id: 'c1', name: 'Campari', price: 10.00, category: Category.CACHACA },
+    { id: 'c2', name: 'Dreher', description: '30ml / 60ml', price: 'R$ 2,00 / 4,00', category: Category.CACHACA },
+    { id: 'c3', name: 'Velho Barreiro', description: '30ml / 60ml', price: 'R$ 1,50 / 3,00', category: Category.CACHACA },
+  ],
+  cervejas: [
+    { id: 'cv1', name: 'Heineken Long', volume: 'Long Neck', price: 80.00, category: Category.CERVEJA },
+    { id: 'cv2', name: 'Stella Artois Long', volume: 'Long Neck', price: 80.00, category: Category.CERVEJA },
+    { id: 'cv3', name: 'Spaten', volume: '350ml', price: 50.00, category: Category.CERVEJA },
+    { id: 'cv4', name: 'Eisenbahn', volume: '269ml', price: 40.00, category: Category.CERVEJA },
+    { id: 'cv5', name: 'Império', volume: '269ml', price: 40.00, category: Category.CERVEJA },
+    { id: 'cv6', name: 'Budweiser', volume: '269ml', price: 40.00, category: Category.CERVEJA },
+    { id: 'cv7', name: 'Amstel', volume: '269ml', price: 40.00, category: Category.CERVEJA },
+    { id: 'cv8', name: 'Original', volume: '269ml', price: 40.00, category: Category.CERVEJA },
+    { id: 'cv9', name: 'Skol', volume: '269ml', price: 30.00, category: Category.CERVEJA },
+    { id: 'cv10', name: 'Itaipava', volume: '269ml', price: 30.00, category: Category.CERVEJA },
+    { id: 'cv11', name: 'Original', volume: '269ml', price: 28.00, category: Category.CERVEJA },
+    { id: 'cv12', name: 'Itaipava', volume: '269ml', price: 28.00, category: Category.CERVEJA },
+    { id: 'cv13', name: 'Budweiser', volume: '269ml', price: 25.00, category: Category.CERVEJA },
+  ],
+  vinhos: [
+    { id: 'v1', name: 'Draft Bella Roma', price: 12.00, category: Category.VINHO },
+    { id: 'v2', name: 'Draft Uva', price: 10.00, category: Category.VINHO },
+    { id: 'v3', name: 'Cantinho do Vale', price: 10.00, category: Category.VINHO },
+    { id: 'v4', name: 'Pergola Suave', volume: '1L', price: 22.00, category: Category.VINHO },
+  ],
+  ginGarrafas: [
+    { id: 'gg1', name: 'Beefeater Morango', price: 119.90, category: Category.GIN_GARRAFA },
+    { id: 'gg2', name: 'Beefeater Tradicional', price: 116.90, category: Category.GIN_GARRAFA },
+    { id: 'gg3', name: 'Tanqueray', price: 105.00, category: Category.GIN_GARRAFA },
+    { id: 'gg4', name: 'Gordons', price: 70.00, category: Category.GIN_GARRAFA },
+    { id: 'gg5', name: 'Eternity', description: '(Todas as versões)', price: 25.00, category: Category.GIN_GARRAFA },
+    { id: 'gg6', name: 'Invictus', description: '(Todas as versões)', price: 22.00, category: Category.GIN_GARRAFA },
+  ],
+  caipirinhas: [
+    { id: 'cp1', name: 'Gourmet', description: 'Todos os sabores', price: 18.00, category: Category.CAIPIRINHA },
+    { id: 'cp2', name: 'Tradicional', description: 'Todos os sabores', price: 15.00, category: Category.CAIPIRINHA },
+    { id: 'cp3', name: 'Morango c/ Limão', price: 16.50, category: Category.CAIPIRINHA },
+    { id: 'cp4', name: 'Espanhola de Vinho', description: 'Frutas variadas', price: 15.00, category: Category.CAIPIRINHA },
+    { id: 'cp5', name: 'Uva Atômica', description: 'Drink sem álcool', price: 13.00, category: Category.CAIPIRINHA },
+  ],
+  narguile: [
+    { id: 'n1', name: 'Sessão de Narguile', price: 15.00, category: Category.NARGUILE },
+  ],
+  sucos: [
+    { id: 's1', name: 'Naturais 700ml', description: 'Morango, Kiwi, Limão, Maracujá', price: 10.00, category: Category.SUCO },
+  ],
+  nonAlcoholic: {
+    energeticos: [
+      { id: 'e1', name: 'Monster 473ml', description: 'Tradicional, Zero, Manga, Pêssego', price: 12.00, category: Category.NON_ALCOHOLIC },
+      { id: 'e2', name: 'Red Bull 250ml', description: 'Tradicional, Blueberry & Baunilha, Tropicais, Nectarina', price: 10.00, category: Category.NON_ALCOHOLIC },
+    ],
+    refrigerantes: [
+      { id: 'r1', name: 'Refriko 200ml', description: 'Guaraná, Laranja, Tubaina', price: 2.00, category: Category.NON_ALCOHOLIC },
+      { id: 'r2', name: 'Coca / Guaraná Ant. 200ml', price: 3.00, category: Category.NON_ALCOHOLIC },
+      { id: 'r3', name: 'Lata 350ml', description: 'Coca, Guaraná, Pepsi, Sprite, Sukita Uva', price: 5.00, category: Category.NON_ALCOHOLIC },
+      { id: 'r4', name: 'Tubaina 350ml', price: 4.50, category: Category.NON_ALCOHOLIC },
+      { id: 'r5', name: 'Tiss 2L', description: 'Guaraná, Tubaina', price: 6.00, category: Category.NON_ALCOHOLIC },
+      { id: 'r6', name: 'Sukita 2L', description: 'Laranja, Limão, Uva', price: 7.99, category: Category.NON_ALCOHOLIC },
+      { id: 'r7', name: 'Kuat 2L', price: 9.00, category: Category.NON_ALCOHOLIC },
+      { id: 'r8', name: 'Fanta Laranja 2L', price: 9.90, category: Category.NON_ALCOHOLIC },
+      { id: 'r9', name: 'Guaraná Ant. 2L', price: 10.00, category: Category.NON_ALCOHOLIC },
+      { id: 'r10', name: 'Coca-Cola 2L', price: 12.00, category: Category.NON_ALCOHOLIC },
+      { id: 'r11', name: 'Coca-Cola 2,5L', price: 13.00, category: Category.NON_ALCOHOLIC },
+    ],
+    aguas: [
+      { id: 'a1', name: 'Água s/ Gás 500ml', price: 3.00, category: Category.NON_ALCOHOLIC },
+      { id: 'a2', name: 'Água c/ Gás 500ml', price: 3.00, category: Category.NON_ALCOHOLIC },
+      { id: 'a3', name: 'Água s/ Gás 1,5L', price: 5.00, category: Category.NON_ALCOHOLIC },
+      { id: 'a4', name: 'Água Tônica Schweppes', price: 5.00, category: Category.NON_ALCOHOLIC },
+    ]
+  }
+};
