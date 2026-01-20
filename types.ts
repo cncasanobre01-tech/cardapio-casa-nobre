@@ -9,7 +9,9 @@ export enum Category {
   CAIPIRINHA = 'CAIPIRINHA',
   NARGUILE = 'NARGUILE',
   SUCO = 'SUCO',
-  NON_ALCOHOLIC = 'NON_ALCOHOLIC'
+  NON_ALCOHOLIC = 'NON_ALCOHOLIC',
+  COMBO_WHISKY = 'COMBO_WHISKY',
+  COMBO_GIN = 'COMBO_GIN'
 }
 
 export interface MenuItem {
@@ -31,6 +33,8 @@ export interface MenuData {
   vinhos: MenuItem[];
   ginGarrafas: MenuItem[];
   caipirinhas: MenuItem[];
+  comboWhiskies: MenuItem[];
+  comboGins: MenuItem[];
   narguile: MenuItem[];
   sucos: MenuItem[];
   nonAlcoholic: {

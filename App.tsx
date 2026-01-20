@@ -11,7 +11,9 @@ const App: React.FC = () => {
 
   const categories = [
     { id: Category.WHISKY, label: '🥃 Whisky', icon: '🥃' },
+    { id: Category.COMBO_WHISKY, label: '📦 Combo Whisky', icon: '📦' },
     { id: Category.GIN, label: '🍹 Gin (Doses)', icon: '🍹' },
+    { id: Category.COMBO_GIN, label: '📦 Combo Gin', icon: '📦' },
     { id: Category.GIN_GARRAFA, label: '🍾 Gin (Garrafa)', icon: '🍾' },
     { id: Category.CACHACA, label: '🥃 Cachaça', icon: '🥃' },
     { id: Category.CERVEJA, label: '🍺 Cervejas', icon: '🍺' },
@@ -80,6 +82,15 @@ const App: React.FC = () => {
           </div>
         )}
 
+        {activeTab === Category.COMBO_WHISKY && (
+          <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <SectionHeader title="Combos de Whisky" subtitle="Acompanha energético Vibe ou Red Bull" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {MENU_DATA.comboWhiskies.map((item) => <MenuItemCard key={item.id} item={item} />)}
+            </div>
+          </div>
+        )}
+
         {activeTab === Category.GIN && (
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <SectionHeader title="Doses de Gin" subtitle="Escolha seu sabor favorito" />
@@ -89,13 +100,14 @@ const App: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {MENU_DATA.gins.map((item) => <MenuItemCard key={item.id} item={item} />)}
             </div>
-            <div className="glass-card p-6 rounded-2xl border-dashed border-gold-border/30">
-              <h3 className="text-[10px] font-black uppercase tracking-[0.3em] gold-text mb-4 text-center">Sabores Disponíveis</h3>
-              <div className="flex flex-wrap justify-center gap-2">
-                {MENU_DATA.ginFlavors.map((flavor, i) => (
-                  <span key={i} className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-[10px] font-bold text-gray-300 uppercase">{flavor}</span>
-                ))}
-              </div>
+          </div>
+        )}
+
+        {activeTab === Category.COMBO_GIN && (
+          <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <SectionHeader title="Combos de Gin" subtitle="Sua garrafa acompanhada com gelo e frutas" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {MENU_DATA.comboGins.map((item) => <MenuItemCard key={item.id} item={item} />)}
             </div>
           </div>
         )}
@@ -146,7 +158,7 @@ const App: React.FC = () => {
               {MENU_DATA.caipirinhas.map((item) => <MenuItemCard key={item.id} item={item} />)}
             </div>
             <div className="glass-card p-4 rounded-xl border-dashed border-gold-border/20 text-center">
-              <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-2 font-bold">Frutas</p>
+              <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-2 font-bold">Frutas Disponíveis</p>
               <p className="text-sm text-gray-300 font-medium">Limão, Morango, Abacaxi, Kiwi, Maracujá</p>
             </div>
           </div>
@@ -190,15 +202,12 @@ const App: React.FC = () => {
             <div className="grid grid-cols-1 gap-4">
               {MENU_DATA.narguile.map((item) => <MenuItemCard key={item.id} item={item} />)}
             </div>
-            <div className="p-16 text-center opacity-10 pointer-events-none">
-               <span className="text-9xl">💨</span>
-            </div>
           </div>
         )}
 
       </main>
 
-      {/* Rodapé com WhatsApp Atualizado */}
+      {/* Rodapé com WhatsApp */}
       <footer className="mt-24 pb-12 text-center px-4">
         <p className="text-gray-600 text-[10px] mb-4 tracking-[0.4em] uppercase font-bold">Casa Nobre • Adega & Lounge</p>
         <p className="text-gray-400 font-serif italic text-xl mb-10">"Qualidade e Nobreza em cada dose."</p>
@@ -210,13 +219,8 @@ const App: React.FC = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-4 gold-bg text-black font-black py-5 px-14 rounded-full hover:scale-105 transition-all shadow-[0_15px_40px_rgba(212,175,55,0.4)] active:scale-95 uppercase text-sm tracking-widest"
           >
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.185-.573c.948.517 2.011.808 3.146.809 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm3.332 7.788c-.146.411-.741.758-1.026.808-.285.051-.555.074-.847.074-.292 0-1.168-.276-2.185-.733-1.017-.457-1.688-1.31-2.185-2.029-.497-.719-.848-1.554-.848-2.43 0-.876.45-1.341.614-1.527.164-.186.365-.233.486-.233h.365c.121 0 .285.023.411.327l.555 1.34c.051.121.074.233.023.327-.051.093-.093.164-.187.256-.093.093-.21.21-.303.303-.093.093-.187.186-.093.35.093.164.411.677.886 1.103.61.547 1.12.72 1.285.813.164.093.256.07.35-.046.093-.116.411-.486.517-.655.107-.168.21-.143.35-.093l1.32.614c.143.074.233.116.28.186.046.074.046.41-.107.821z"/>
-              <path fillRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 2.144.676 4.13 1.831 5.76L2 22l4.39-1.562C7.904 21.439 9.873 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zM4 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8a7.963 7.963 0 01-4.906-1.691L4.332 19.332l1.023-3.729A7.963 7.963 0 014 12z" clipRule="evenodd"/>
-            </svg>
             Fazer Pedido Agora
           </a>
-          <p className="text-gray-600 text-[9px] uppercase tracking-[0.3em] mt-4 font-bold">Atendimento Premium • Casa Nobre</p>
         </div>
       </footer>
     </div>
