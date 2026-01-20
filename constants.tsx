@@ -46,8 +46,8 @@ export const MENU_DATA: MenuData = {
   ],
   vinhos: [
     { id: 'v1', name: 'Draft Bella Roma', price: 12.00, category: Category.VINHO },
-    { id: 'v2', name: 'Draft Uva', price: 10.00, category: Category.VINHO },
-    { id: 'v3', name: 'Cantinho do Vale', price: 12.00, category: Category.VINHO },
+    { id: 'v2', name: 'Draft Uva', price: 12.00, category: Category.VINHO },
+    { id: 'v3', name: 'Cantinho do Vale', price: 10.00, category: Category.VINHO },
     { id: 'v4', name: 'Pergola Suave', volume: '1L', price: 22.00, category: Category.VINHO },
   ],
   ginGarrafas: [
